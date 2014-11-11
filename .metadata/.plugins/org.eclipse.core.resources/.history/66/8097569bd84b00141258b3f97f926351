@@ -1,0 +1,52 @@
+package com.javaworld.sample.service.impl;
+
+import java.util.EventListener;
+
+import org.osgi.framework.*;
+import android.content.Context;
+import android.hardware.*;
+import android.widget.TextView;
+
+import com.javaworld.sample.service.HelloGyroskope;
+
+public class HelloGyroskopeActivator implements BundleActivator  {
+	
+    ServiceRegistration GyroskopeServiceRegistration;
+    private SensorManager sensorManager;	  	  
+    Sensor temperature;
+    EventListener event;
+ 
+    TextView textview;
+    
+    public void start(BundleContext context) throws Exception {
+    	HelloGyroskope helloService = new HelloGyroskopeImpl();
+    	GyroskopeServiceRegistration =context.registerService(HelloGyroskope.class.getName(), helloService, null);
+    	
+    	// Get an instance of the SensorManager
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);	       
+        
+         if(sensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).size()!=0)
+         {
+        	temperature = sensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).get(0);
+        	sensorManager.registerListener(this,temperature, SensorManager.SENSOR_DELAY_NORMAL);        		    
+         }
+        else
+         { 	        		        		   
+        	String message = "Sorry!Sensor not found";
+        	// Create the text view
+            TextView textView = new TextView(this);
+            textView.setTextSize(20);
+            textView.setText(message);
+            // Set the text view as the activity layout
+            setContentView(textView);
+             return; 		          		           
+         }		      	       
+    }
+    	
+    	
+    	
+    }
+    public void stop(BundleContext context) throws Exception {
+    	GyroskopeServiceRegistration.unregister();
+    }
+}

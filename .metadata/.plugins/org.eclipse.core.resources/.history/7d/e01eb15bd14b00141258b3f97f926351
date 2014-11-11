@@ -1,0 +1,5 @@
+package com.javaworld.sample.service.impl;
+
+public class HelloServiceActivator {
+
+}

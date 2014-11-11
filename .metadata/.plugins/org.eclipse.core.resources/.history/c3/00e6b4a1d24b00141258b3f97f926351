@@ -1,0 +1,13 @@
+package com.javaworld.sample.service.impl;
+
+import com.javaworld.sample.service.HelloGyroskope;
+
+
+public class HelloGyroskopeImpl implements HelloGyroskope {
+
+		@Override
+		public String values(){
+			// TODO Auto-generated method stub
+			return("Inside HelloGyroskopeImpl");
+		}
+}

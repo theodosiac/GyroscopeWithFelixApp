@@ -1,0 +1,14 @@
+Bundle-ManifestVersion: 2
+Bundle-Name: HelloGyroskope2
+Bundle-SymbolicName: com.javaworld.sample.HelloGyroskope2
+Bundle-Activator: com.javaworld.sample.service.impl.HelloGyroskopeActivator
+Export-Package: com.javaworld.sample.service
+Manifest-Version: 1.0.0
+Bundle-Vendor: Apache Felix
+Bundle-Version: 1.0.0
+Bundle-Description: A dictionary client using the Service Tracker.
+Import-Package: org.osgi.framework
+Bundle-RequiredExecutionEnvironment: OSGi/Minimum-1.0
+
+
+

@@ -1,0 +1,12 @@
+package com.javaworld.sample.service;
+
+public interface HelloGyroskope {
+
+public default String values()
+	{
+	System.out.println("Inside interface");
+	return ("inside");
+	}
+
+
+}

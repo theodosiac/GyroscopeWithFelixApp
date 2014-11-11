@@ -1,0 +1,8 @@
+package com.javaworld.sample.service;
+
+public interface HelloGyroskope
+	{
+
+	public int values();
+	
+	}

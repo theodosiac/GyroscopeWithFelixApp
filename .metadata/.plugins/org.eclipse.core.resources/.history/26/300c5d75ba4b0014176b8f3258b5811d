@@ -1,0 +1,7 @@
+package com.javaworld.sample.service.impl;
+
+import com.javaworld.sample.service.HelloGyroskope;
+
+public class HelloGyroskopeImpl implements HelloGyroskope {
+
+}

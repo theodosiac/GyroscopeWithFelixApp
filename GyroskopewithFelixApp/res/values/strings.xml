@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Myapp2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sensing">SensingActivity</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="button_gyroscope">Start Sensing with Gyroscope</string>
+    <string name="title_activity_sensingwith_gyroscope">SensingwithGyroscope</string>
+    <string name="_mnt_sdcard_felix_cachedir">/mnt/sdcard/felix/cacheDir</string>
+    <string name="_mnt_sdcard_felix_bundle">/mnt/sdcard/felix/bundle</string>
+    <string name="title_activity_sensingwith_gyroskope2">SensingwithGyroskope2</string>
+
+</resources>
